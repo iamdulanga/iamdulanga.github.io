@@ -374,7 +374,7 @@ function showToast(title, message, isSuccess = true) {
 function initClipboardCopy() {
     const quickCopyBtn = document.getElementById('quickCopyEmailBtn');
     const copyEmailMini = document.getElementById('copyEmailMini');
-    const emailToCopy = 'iamdulanga.dev@gmail.com';
+    const emailToCopy = 'iamdulanga@proton.me';
 
     function copyEmail() {
         navigator.clipboard.writeText(emailToCopy).then(() => {

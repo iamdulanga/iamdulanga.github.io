@@ -70,7 +70,7 @@ npx serve .
 ## 📬 Contact & Connect
 
 - **GitHub**: [@iamdulanga](https://github.com/iamdulanga)
-- **Email**: [iamdulanga.dev@gmail.com](mailto:iamdulanga.dev@gmail.com)
-- **Location**: Colombo, Sri Lanka (UTC+05:30)
+- **Email**: [iamdulanga@proton.me](mailto:iamdulanga@proton.me)
+- **Location**: Kandy, Sri Lanka (UTC+05:30)
 
 &copy; 2026 Dulanga. All rights reserved.
