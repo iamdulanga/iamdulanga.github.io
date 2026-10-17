@@ -82,6 +82,13 @@ body {
     line-height: 1.65;
 }
 
+/* Hide default arrow cursor on desktop so the electric torch acts as the cursor */
+@media (pointer: fine) {
+    html, body, a, button, input, textarea, select, label, [role="button"], .filter-btn, .nav-link, .social-pill, .btn {
+        cursor: none !important;
+    }
+}
+
 /* Selection Color */
 ::selection {
     background: rgba(0, 245, 255, 0.25);
@@ -178,22 +185,103 @@ body {
     z-index: 0;
 }
 
-/* Cursor dynamic glow overlay */
-.cursor-glow {
+/* ===================================================================
+   ELECTRIC TORCH CURSOR SYSTEM
+   =================================================================== */
+.cursor-torch {
     position: fixed;
-    width: 480px;
-    height: 480px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 245, 255, 0.08) 0%, rgba(99, 102, 241, 0.04) 40%, transparent 70%);
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
     pointer-events: none;
-    z-index: 1;
-    transition: opacity 0.3s ease;
+    z-index: 99999;
     opacity: 0;
+    transition: opacity 0.3s ease;
+    will-change: transform;
 }
 
-body:hover .cursor-glow {
+body:hover .cursor-torch {
     opacity: 1;
+}
+
+/* Subtle Ambient Spotlight Light (Soft, original default light level) */
+.torch-beam {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 460px;
+    height: 460px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(0, 245, 255, 0.08) 0%,
+        rgba(99, 102, 241, 0.04) 40%,
+        transparent 70%
+    );
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Central Electric Torch Core (Precise custom cursor dot) */
+.torch-core {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 
+        0 0 4px #ffffff,
+        0 0 8px var(--cyan-primary),
+        0 0 14px rgba(0, 245, 255, 0.8);
+    pointer-events: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Micro Electric Resonance Ring */
+.torch-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 245, 255, 0.5);
+    box-shadow: 0 0 8px rgba(0, 245, 255, 0.25);
+    pointer-events: none;
+    animation: torchRingPulse 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+@keyframes torchRingPulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.25);
+        opacity: 0.35;
+    }
+}
+
+/* Hovering interactive links & buttons: subtle micro-expansion without enlarging the light */
+body.torch-active .torch-core {
+    transform: translate(-50%, -50%) scale(1.35);
+    background: #ffffff;
+    box-shadow: 
+        0 0 6px #ffffff,
+        0 0 12px var(--cyan-primary),
+        0 0 18px rgba(0, 245, 255, 0.85);
+}
+
+body.torch-active .torch-ring {
+    border-color: var(--cyan-primary);
+    transform: translate(-50%, -50%) scale(1.3);
 }
 
 /* ===================================================================

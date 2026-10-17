@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initMobileNav();
     initSpotlightEffect();
-    initCursorGlow();
+    initCursorTorch();
     initTerminalTyping();
     initProjectFiltering();
     initCaseStudyModal();
@@ -82,21 +82,53 @@ function initSpotlightEffect() {
 }
 
 /* ===================================================================
-   4. CURSOR GLOW (DESKTOP)
+   4. ELECTRIC TORCH CURSOR SYSTEM (DESKTOP)
    =================================================================== */
-function initCursorGlow() {
-    const cursor = document.getElementById('cursorGlow');
-    if (!cursor) return;
+function initCursorTorch() {
+    const torch = document.getElementById('cursorTorch');
+    if (!torch) return;
 
     // Check if device supports fine hover pointer
-    if (window.matchMedia('(pointer: fine)').matches) {
-        window.addEventListener('mousemove', (e) => {
-            cursor.style.left = `${e.clientX}px`;
-            cursor.style.top = `${e.clientY}px`;
-        }, { passive: true });
-    } else {
-        cursor.style.display = 'none';
+    if (!window.matchMedia('(pointer: fine)').matches) {
+        torch.style.display = 'none';
+        return;
     }
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let torchX = mouseX;
+    let torchY = mouseY;
+    let isMoving = false;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (!isMoving) {
+            isMoving = true;
+            renderTorch();
+        }
+    }, { passive: true });
+
+    function renderTorch() {
+        // Snappy, high-precision cursor tracking
+        torchX += (mouseX - torchX) * 0.75;
+        torchY += (mouseY - torchY) * 0.75;
+
+        torch.style.transform = `translate3d(${torchX}px, ${torchY}px, 0)`;
+
+        if (Math.abs(mouseX - torchX) > 0.05 || Math.abs(mouseY - torchY) > 0.05) {
+            requestAnimationFrame(renderTorch);
+        } else {
+            isMoving = false;
+        }
+    }
+
+    // Electric voltage flare when hovering interactive elements
+    const interactiveElements = document.querySelectorAll('a, button, input, textarea, select, .spotlight-card, .skill-badge');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('torch-active'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('torch-active'));
+    });
 }
 
 /* ===================================================================
