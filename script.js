@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initScrollSpy();
     initBackToTop();
+    initThemeToggle();
 });
 
 /* ===================================================================
@@ -500,5 +501,52 @@ function initBackToTop() {
     const currentYear = document.getElementById('currentYear');
     if (currentYear) {
         currentYear.textContent = new Date().getFullYear();
+    }
+}
+
+/* ===================================================================
+   12. LIGHT / DARK THEME TOGGLE
+   =================================================================== */
+function initThemeToggle() {
+    const desktopToggle = document.getElementById('themeToggle');
+    const mobileToggle = document.getElementById('mobileThemeToggle');
+
+    // Retrieve saved theme preference or system preference (default: dark)
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'dark'); // default cyber dark
+
+    applyTheme(initialTheme);
+
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('portfolio-theme', theme);
+
+        if (mobileToggle) {
+            const label = mobileToggle.querySelector('.theme-label');
+            if (label) {
+                label.textContent = theme === 'dark' ? '☀️ Switch to Light Theme' : '🌙 Switch to Dark Theme';
+            }
+        }
+    }
+
+    function toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        const nextTheme = current === 'dark' ? 'light' : 'dark';
+
+        applyTheme(nextTheme);
+
+        showToast(
+            nextTheme === 'light' ? 'Light Theme Activated' : 'Dark Cyber Theme Activated',
+            nextTheme === 'light' ? 'Switched to clean minimalist light mode.' : 'Switched to cyber elegance dark mode.'
+        );
+    }
+
+    if (desktopToggle) {
+        desktopToggle.addEventListener('click', toggleTheme);
+    }
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', toggleTheme);
     }
 }
