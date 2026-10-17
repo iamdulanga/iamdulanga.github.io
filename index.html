@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulanga | Full-Stack Web Developer & Software Engineer</title>
+    <meta name="description"
+        content="Portfolio of Dulanga, Full-Stack Web Developer specializing in Laravel, PHP, modern JavaScript/TypeScript, RESTful APIs, and scalable web architectures.">
+    <meta name="keywords"
+        content="Dulanga, Full-Stack Developer, Web Developer, Laravel, PHP, JavaScript, Portfolio, Software Engineer">
+    <meta name="author" content="Dulanga">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dulanga | Full-Stack Web Developer">
+    <meta property="og:description"
+        content="Crafting scalable web architectures, modern APIs, and high-impact digital experiences.">
+    <meta property="og:image" content="assets/img/avatar.jpg">
+
+    <!-- Favicon (Inline SVG) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230a0a0c'/><text x='50%' y='62%' font-size='50' font-family='sans-serif' font-weight='900' fill='%2300f5ff' text-anchor='middle'>D</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Ambient Background Lighting -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+    <div class="ambient-grid"></div>
+
+    <!-- Electric Torch Cursor & Dynamic Illumination -->
+    <div class="cursor-torch" id="cursorTorch">
+        <div class="torch-beam"></div>
+        <div class="torch-core"></div>
+        <div class="torch-ring"></div>
+    </div>
+
+    <!-- Header & Glass Navigation -->
+    <header class="site-header" id="header">
+        <nav class="nav-container">
+            <a href="#hero" class="brand-logo" aria-label="Dulanga Home">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-name">dulanga</span>
+                <span class="logo-accent">.dev</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Stack</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="status-badge" title="Actively taking on new opportunities">
+                    <span class="status-pulse"></span>
+                    <span class="status-text">Available</span>
+                </div>
+                <a href="#contact" class="btn btn-outline btn-sm nav-cta">Let's Talk</a>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu"
+                    aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Drawer -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <ul class="mobile-menu">
+                <li><a href="#about" class="mobile-link">About</a></li>
+                <li><a href="#skills" class="mobile-link">Tech Stack</a></li>
+                <li><a href="#projects" class="mobile-link">Projects</a></li>
+                <li><a href="#experience" class="mobile-link">Experience</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+            <div class="mobile-drawer-footer">
+                <a href="#contact" class="btn btn-primary btn-full mobile-cta">Start a Project</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg class="badge-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                        <span class="badge-text">Full-Stack Web Developer & Engineer</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Architecting <span class="gradient-text">resilient backend systems</span> and high-performance
+                        web experiences.
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Hi, I'm <strong class="text-white">Dulanga</strong>. I bridge the gap between elegant modern
+                        frontend interfaces and robust, scalable backend architectures with <span
+                            class="tech-highlight">Laravel</span>, <span class="tech-highlight">PHP</span>, <span
+                            class="tech-highlight">JavaScript</span>, and modern cloud database ecosystems.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Selected Work</span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <button class="btn btn-secondary" id="quickCopyEmailBtn" data-email="iamdulanga.dev@gmail.com">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                            </svg>
+                            <span id="copyBtnText">Copy Email</span>
+                        </button>
+                    </div>
+
+                    <!-- Hero Quick Stats Bar -->
+                    <div class="hero-metrics">
+                        <div class="metric-item">
+                            <span class="metric-number">4+</span>
+                            <span class="metric-label">Years of Crafting Web Apps</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-number">25+</span>
+                            <span class="metric-label">Completed Deployments</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-number">99.9%</span>
+                            <span class="metric-label">Reliability & Code Quality</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Interactive Terminal Card -->
+                <div class="hero-visual">
+                    <div class="terminal-card spotlight-card">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="terminal-title">developer-session — zsh</div>
+                            <div class="terminal-actions">
+                                <span class="terminal-tag">v2.4.0</span>
+                            </div>
+                        </div>
+
+                        <div class="terminal-body" id="terminalBody">
+                            <div class="term-line prompt-line">
+                                <span class="term-prompt">dulanga@macbook ~ %</span>
+                                <span class="term-cmd">cat developer_profile.json</span>
+                            </div>
+                            <div class="term-output">
+                                <pre><code>{
+                                    <span class="key">"name"</span>: <span class="string">"Dulanga"</span>,
+                                    <span class="key">"role"</span>: <span class="string">"Full-Stack Web Developer"</span>,
+                                    <span class="key">"core_stack"</span>: [
+                                        <span class="string">"Laravel"</span>, <span class="string">"PHP 8+"</span>, <span class="string">"MySQL"</span>,
+                                        <span class="string">"JavaScript / ESNext"</span>, <span class="string">"REST APIs"</span>
+                                    ],
+                                    <span class="key">"architecture"</span>: <span class="string">"Clean Code & Scalable Microservices"</span>,
+                                    <span class="key">"location"</span>: <span class="string">"Kandy, Sri Lanka"</span>,
+                                    <span class="key">"status"</span>: <span class="string">"Ready for new high-impact challenges"</span>
+                                    }</code></pre>
+                            </div>
+                            <div class="term-line prompt-line">
+                                <span class="term-prompt">dulanga@macbook ~ %</span>
+                                <span class="term-cmd typing-text" id="terminalTypingText"></span>
+                                <span class="term-cursor"></span>
+                            </div>
+                        </div>
+
+                        <!-- Card Footer Developer Profile Snippet -->
+                        <div class="terminal-footer">
+                            <img src="assets/img/avatar.jpg" alt="Dulanga Developer Avatar" class="mini-avatar">
+                            <div class="mini-info">
+                                <span class="mini-name">Dulanga</span>
+                                <span class="mini-status">Full-Stack Engineer • @iamdulanga</span>
+                            </div>
+                            <a href="https://github.com/iamdulanga" target="_blank" rel="noopener noreferrer"
+                                class="mini-link" aria-label="GitHub Profile">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">01 // Background</span>
+                    <h2 class="section-title">Engineered with Passion, <span class="gradient-text">Delivered with
+                            Precision</span></h2>
+                    <p class="section-desc">A brief glimpse into who I am, what drives my engineering philosophy, and
+                        how I build digital solutions.</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Bio Glass Card -->
+                    <div class="about-card spotlight-card">
+                        <div class="card-inner">
+                            <div class="avatar-wrapper">
+                                <img src="assets/img/avatar.jpg" alt="Dulanga" class="profile-image">
+                                <div class="avatar-ring"></div>
+                            </div>
+                            <h3 class="card-title">Who is Dulanga?</h3>
+                            <p class="card-text">
+                                I am a dedicated Full-Stack Web Developer with deep expertise in modern web frameworks,
+                                database engineering, and user-centric frontend experiences.
+                            </p>
+                            <p class="card-text">
+                                Over the years, I've designed and delivered bespoke enterprise web applications,
+                                real-time gaming portals, e-commerce platforms, and high-load APIs. I thrive when
+                                solving complex logic puzzles, optimizing database queries, and refining the subtle
+                                micro-interactions that make web apps unforgettable.
+                            </p>
+                            <div class="personal-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-bullet">▸</span>
+                                    <span>Clean, maintainable, modular codebase approach</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-bullet">▸</span>
+                                    <span>High security standards (CSRF, XSS prevention, JWT, RBAC)</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-bullet">▸</span>
+                                    <span>Speed-optimized: from database indices to browser paint cycles</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Principles & Highlights -->
+                    <div class="principles-grid">
+
+                        <div class="principle-card spotlight-card">
+                            <div class="principle-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </div>
+                            <h4 class="principle-title">Fast & Efficient</h4>
+                            <p class="principle-desc">Zero bloat. Fast queries, eager-loading relations, lean assets,
+                                and ultra-responsive interfaces that load in milliseconds.</p>
+                        </div>
+
+                        <div class="principle-card spotlight-card">
+                            <div class="principle-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <h4 class="principle-title">Rock-Solid Security</h4>
+                            <p class="principle-desc">Strict validation, sanitization, role-based access control (RBAC),
+                                and hardened endpoints built with enterprise best practices.</p>
+                        </div>
+
+                        <div class="principle-card spotlight-card">
+                            <div class="principle-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <h4 class="principle-title">Scalable Architecture</h4>
+                            <p class="principle-desc">Clean architecture, service-repository patterns, decoupled
+                                components, and APIs ready to scale effortlessly with growth.</p>
+                        </div>
+
+                        <div class="principle-card spotlight-card">
+                            <div class="principle-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                                </svg>
+                            </div>
+                            <h4 class="principle-title">Pixel-Perfect UX</h4>
+                            <p class="principle-desc">Intuitive, cohesive design systems with subtle modern animations,
+                                high contrast readability, and full responsive polish.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">02 // Capabilities</span>
+                    <h2 class="section-title">The Engineering <span class="gradient-text">Tech Arsenal</span></h2>
+                    <p class="section-desc">Technologies and tools I leverage every day to build modern, reliable
+                        software.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Category 1: Backend & Core -->
+                    <div class="skill-category-card spotlight-card">
+                        <div class="skill-category-header">
+                            <div class="skill-cat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <div class="skill-cat-info">
+                                <h3>Backend Engineering</h3>
+                                <span>Server logic, APIs & microservices</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-badge primary">
+                                <svg class="tech-icon brand-laravel" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M21.727 5.25L13.5 1.5 4.5 5.25v13.5L13.5 22.5l8.227-3.75V5.25zM13.5 3.364l6.091 2.782-2.727 1.255-6.091-2.782 2.727-1.255zm-7.091 3.518l5.091 2.327v6.873l-5.091-2.327V6.882zm7.091 13.754l-5.091-2.327v-5.618l5.091 2.327v5.618zm1.091-6.873v-6.873l5.091-2.327v6.873l-5.091 2.327z"/>
+                                </svg>
+                                Laravel
+                            </span>
+                            <span class="skill-badge primary">
+                                <svg class="tech-icon brand-php" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-4.78 6.5h2.46c1.23 0 2.05.58 2.05 1.63 0 1.15-.92 1.87-2.2 1.87h-1.12l-.66 3.5H6.55l1.67-7zm7.56 0h2.46c1.23 0 2.05.58 2.05 1.63 0 1.15-.92 1.87-2.2 1.87h-1.12l-.66 3.5h-1.19l1.66-7zm-4.5 2.12c.74 0 1.23.33 1.23.95 0 .72-.56 1.16-1.32 1.16h-.91l.4-2.11h.6zm7.56 0c.74 0 1.23.33 1.23.95 0 .72-.56 1.16-1.32 1.16h-.91l.4-2.11h.6zm-5.03 1.38h1.16l-.66 3.5H11.6l.67-3.5z"/>
+                                </svg>
+                                PHP 8+
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon brand-node" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l9 5.2v10.4l-9 5.2-9-5.2V7.2L12 2zm0 2.3L4.8 8.5v7l7.2 4.2 7.2-4.2v-7L12 4.3zm-.2 5.5c1.9 0 3 1.1 3 2.7 0 1.8-1.2 2.8-3.1 2.8H9.8v2.2H8.2V9.8h3.6zm-.2 1.4H9.8v2.7h1.7c1 0 1.6-.5 1.6-1.4 0-.8-.6-1.3-1.5-1.3z"/>
+                                </svg>
+                                Node.js
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                                Express.js
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                </svg>
+                                RESTful APIs
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                                MVC Architecture
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                                Auth & JWT
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16.5 9.4 7.55 4.24a1.78 1.78 0 0 0-2.5 1.55v12.42a1.78 1.78 0 0 0 2.5 1.55L16.5 14.6a1.78 1.78 0 0 0 0-3.2z"></path>
+                                </svg>
+                                Composer
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Frontend & UI -->
+                    <div class="skill-category-card spotlight-card">
+                        <div class="skill-category-header">
+                            <div class="skill-cat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    <polyline points="7 9 10 12 7 15"></polyline>
+                                    <line x1="13" y1="15" x2="17" y2="15"></line>
+                                </svg>
+                            </div>
+                            <div class="skill-cat-info">
+                                <h3>Frontend & Interaction</h3>
+                                <span>Modern UI, dynamic DOM & styling</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-badge primary">
+                                <svg class="tech-icon brand-js" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3 3h18v18H3V3zm13.7 13.8c-.8.8-1.9 1.2-3.1 1.2-2.4 0-3.8-1.4-4-3.5l2.2-.4c.2 1.1.9 1.8 1.8 1.8.8 0 1.4-.4 1.4-1.2 0-.8-.5-1.1-1.6-1.5l-.8-.3c-1.7-.7-2.6-1.6-2.6-3.1 0-1.8 1.4-3.1 3.4-3.1 1.7 0 2.9.7 3.5 2.1l-2 1c-.3-.7-.7-1-1.5-1-.7 0-1.2.4-1.2 1 0 .6.4.9 1.4 1.3l.8.3c2 .8 2.8 1.7 2.8 3.3 0 1.4-.7 2.4-1.9 3.1zm-8-1.4c.4.7 1 1.2 2 1.2.8 0 1.3-.4 1.3-1.4V8.5h2.2v6.6c0 2.2-1.3 3.3-3.4 3.3-1.9 0-3.2-1-3.7-2.5l1.6-1.1z"/>
+                                </svg>
+                                JavaScript (ES6+)
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon brand-laravel" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M21.727 5.25L13.5 1.5 4.5 5.25v13.5L13.5 22.5l8.227-3.75V5.25zM13.5 3.364l6.091 2.782-2.727 1.255-6.091-2.782 2.727-1.255zm-7.091 3.518l5.091 2.327v6.873l-5.091-2.327V6.882zm7.091 13.754l-5.091-2.327v-5.618l5.091 2.327v5.618zm1.091-6.873v-6.873l5.091-2.327v6.873l-5.091 2.327z"/>
+                                </svg>
+                                Blade Templates
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                                    <line x1="9" y1="20" x2="15" y2="20"></line>
+                                    <line x1="12" y1="4" x2="12" y2="20"></line>
+                                </svg>
+                                HTML5 Semantic
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="14" width="7" height="7"></rect>
+                                    <rect x="3" y="14" width="7" height="7"></rect>
+                                </svg>
+                                CSS3 & Grid
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon brand-tailwind" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.975 12 6.001 12z"/>
+                                </svg>
+                                Tailwind CSS
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                                Responsive UX
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="23 4 23 10 17 10"></polyline>
+                                    <polyline points="1 20 1 14 7 14"></polyline>
+                                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                                </svg>
+                                Async & Fetch
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                                Vite
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Database & Cloud -->
+                    <div class="skill-category-card spotlight-card">
+                        <div class="skill-category-header">
+                            <div class="skill-cat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                            </div>
+                            <div class="skill-cat-info">
+                                <h3>Database & Storage</h3>
+                                <span>Data modeling, caching & indexing</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-badge primary">
+                                <svg class="tech-icon brand-mysql" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.92 7.78C16.8 6.54 15.65 5 13.84 5c-2.32 0-3.69 1.62-4.15 3.32-.46 1.7-.1 3.23.77 4.14.87.91 2.12 1.04 3.09 1.04 1.48 0 2.87-.52 3.61-1.3l-.68-.86c-.57.57-1.63.99-2.85.99-.86 0-1.85-.15-2.45-.78-.6-.63-.79-1.68-.48-2.95.31-1.28 1.3-2.43 2.92-2.43 1.32 0 2.06.94 2.15 1.74l1.16-.13zM6 19h1.34l1.24-5.32h.04L10 19h1.32L13 11.2h-1.25l-.75 5.56h-.04L9.58 11.2H8.46L7.08 16.76h-.04L6.34 11.2H5L6 19zm12.5-7.8h-1.3L15.4 19h1.3l.4-2.2h1.6l.4 2.2h1.3l-1.9-7.8zm-.6 4.6l.5-3.2.5 3.2h-1z"/>
+                                </svg>
+                                MySQL
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon brand-postgres" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16.5c-3.5 0-6.2-2.3-6.2-5.5s2.7-5.5 6.2-5.5c1.6 0 3 .5 4 1.4l-1.3 1.5c-.8-.7-1.7-1-2.7-1-2.3 0-4.1 1.6-4.1 3.6s1.8 3.6 4.1 3.6c1.1 0 2.1-.4 2.8-1.1v-1.4h-2.8v-1.9H17v4.1c-1.1 1.1-2.5 1.7-4 1.7z"/>
+                                </svg>
+                                PostgreSQL
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2 2 7l10 5 10-5-10-5Z"></path>
+                                    <path d="m2 17 10 5 10-5"></path>
+                                    <path d="m2 12 10 5 10-5"></path>
+                                </svg>
+                                Eloquent ORM
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
+                                    <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
+                                    <path d="M7 21h10"></path>
+                                    <path d="M12 3v18"></path>
+                                </svg>
+                                Migrations & Seeders
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon brand-redis" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L2.5 7.5l2.4 1.4L12 4.8l7.1 4.1 2.4-1.4L12 2zm-9.5 7.2v5.6l9.5 5.5 9.5-5.5V9.2l-2.4 1.4v4.2L12 18.8 4.9 14.8v-4.2L2.5 9.2zm4.7 2.7L12 14.6l4.8-2.7 2.4 1.4L12 17.4l-7.2-4.1 2.4-1.4z"/>
+                                </svg>
+                                Redis Cache
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                </svg>
+                                Query Optimization
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="18" cy="5" r="3"></circle>
+                                    <circle cx="6" cy="12" r="3"></circle>
+                                    <circle cx="18" cy="19" r="3"></circle>
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                </svg>
+                                Relational Schemas
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: DevOps & Workflow -->
+                    <div class="skill-category-card spotlight-card">
+                        <div class="skill-category-header">
+                            <div class="skill-cat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                                    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                                    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                                    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                                </svg>
+                            </div>
+                            <div class="skill-cat-info">
+                                <h3>DevOps & Workflow</h3>
+                                <span>Deployment, versioning & testing</span>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-badge primary">
+                                <svg class="tech-icon brand-git" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M21.6 10.9l-8.5-8.5c-.8-.8-2.1-.8-2.9 0L8.5 4.1l3.3 3.3c.7-.2 1.6 0 2.2.6.6.6.8 1.5.6 2.2l3.2 3.2c.7-.2 1.6 0 2.2.6.8.8.8 2.1 0 2.9-.8.8-2.1.8-2.9 0-.6-.6-.8-1.5-.6-2.2l-3-3v4.4c.3.2.6.5.7.9.4.9 0 2-.9 2.4-.9.4-2 0-2.4-.9-.4-.9 0-2 .9-2.4.4-.2.8-.2 1.2-.1V8.5c-.4.1-.8.1-1.2-.1-.6-.6-.8-1.5-.6-2.2L4.8 9.9c-.8.8-.8 2.1 0 2.9l8.5 8.5c.8.8 2.1.8 2.9 0l5.4-5.4c.8-.9.8-2.2 0-3z"/>
+                                </svg>
+                                Git & GitHub
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg>
+                                Nginx & Servers
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="4 17 10 11 4 5"></polyline>
+                                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                                </svg>
+                                Linux Shell
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="12 8 8 12 12 16 16 12 12 8"></polygon>
+                                </svg>
+                                Postman & Testing
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon brand-docker" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M13.98 10.04h-1.9V8.16h1.9v1.88zm-2.43 0H9.65V8.16h1.9v1.88zm-2.44 0H7.2V8.16h1.91v1.88zm7.3 0h-1.9V8.16h1.9v1.88zm-2.43-2.4h-1.9V5.75h1.9v1.89zm-2.44 0H9.65V5.75h1.9v1.89zm7.3 2.4h-1.9V8.16h1.9v1.88zm2.4 1.88c-.37-.25-1.5-.37-2.34.22-.44.3-.92.8-1.5.8-.32 0-.64-.1-.95-.23v.8c.45.18.94.28 1.45.28 1.1 0 2-.6 2.7-.9.46-.2.8-.2.9-.2.5 0 .9.2 1.3.5.3-.6.5-1.2.5-1.9-.7.2-1.4.3-2.06.63zm-17.7 2.4c.5 4.6 4.4 8.1 9.1 8.1 4.2 0 7.8-2.9 8.8-6.9H1.67z"/>
+                                </svg>
+                                Docker Containers
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                </svg>
+                                CI/CD Pipelines
+                            </span>
+                            <span class="skill-badge">
+                                <svg class="tech-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                                NPM Ecosystem
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">03 // Featured Works</span>
+                    <h2 class="section-title">Engineered to <span class="gradient-text">Deliver Value</span></h2>
+                    <p class="section-desc">Handcrafted web applications built from scratch with clean code, scalable
+                        architecture, and thoughtful UI.</p>
+                </div>
+
+                <!-- Project Category Filter Tabs -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects <span
+                            class="filter-count">3</span></button>
+                    <button class="filter-btn" data-filter="fullstack">Full-Stack <span
+                            class="filter-count">2</span></button>
+                    <button class="filter-btn" data-filter="webapps">Web Apps <span
+                            class="filter-count">1</span></button>
+                    <button class="filter-btn" data-filter="apis">APIs & Cloud <span
+                            class="filter-count">1</span></button>
+                </div>
+
+                <!-- Projects Showcase Grid -->
+                <div class="projects-grid" id="projectsGrid">
+
+                    <!-- Project 1: ArcadeWeb -->
+                    <article class="project-card spotlight-card" data-category="fullstack webapps"
+                        data-project-id="arcade">
+                        <div class="project-media">
+                            <img src="assets/img/arcade-platform.jpg" alt="ArcadeWeb Gaming Hub Platform"
+                                class="project-img" loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-status-tag">Live Production</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Full-Stack Web Application</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title">ArcadeWeb Gaming & Community Hub</h3>
+                            <p class="project-description">
+                                An interactive entertainment and community platform featuring game stats tracking,
+                                real-time player telemetry, modular Blade architecture, and blazing-fast search.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Laravel</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Tailwind CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm view-case-study" data-project="arcade">
+                                    <span>Case Study</span>
+                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+                                <a href="https://github.com/iamdulanga/arcade-web" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <span>GitHub Code</span>
+                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Nexus Analytics SaaS -->
+                    <article class="project-card spotlight-card" data-category="fullstack" data-project-id="nexus">
+                        <div class="project-media">
+                            <img src="assets/img/saas-dashboard.jpg" alt="Nexus Analytics SaaS Dashboard"
+                                class="project-img" loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-status-tag">Enterprise SaaS</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">Cloud Analytics & Billing</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title">Nexus Analytics & Revenue Engine</h3>
+                            <p class="project-description">
+                                A high-throughput telemetry SaaS dashboard tracking recurring subscription metrics,
+                                real-time instance loads, automated transaction reconciliations, and forecast
+                                projections.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Laravel 11</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Redis Cache</span>
+                                <span class="tag">ChartJS</span>
+                                <span class="tag">Stripe Billing</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm view-case-study" data-project="nexus">
+                                    <span>Case Study</span>
+                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+                                <a href="https://github.com/iamdulanga" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline btn-sm">
+                                    <span>Repository</span>
+                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Aether Gateway -->
+                    <article class="project-card spotlight-card" data-category="apis" data-project-id="aether">
+                        <div class="project-media">
+                            <img src="assets/img/api-gateway.jpg" alt="Aether Microservice API Gateway"
+                                class="project-img" loading="lazy">
+                            <div class="project-overlay">
+                                <span class="project-status-tag">Microservice Engine</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <span class="project-type">API Gateway & Monitoring</span>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <h3 class="project-title">Aether Microservice Gateway & Testing</h3>
+                            <p class="project-description">
+                                A high-performance API management console providing real-time endpoint latency
+                                observability, token authentication, automated payload validation, and testing
+                                sandboxes.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Express</span>
+                                <span class="tag">REST API</span>
+                                <span class="tag">JWT Security</span>
+                                <span class="tag">Docker</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm view-case-study" data-project="aether">
+                                    <span>Case Study</span>
+                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </button>
+                                <a href="https://github.com/iamdulanga" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline btn-sm">
+                                    <span>Repository</span>
+                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Milestones Section -->
+        <section class="section experience-section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">04 // Career Journey</span>
+                    <h2 class="section-title">Milestones & <span class="gradient-text">Experience</span></h2>
+                    <p class="section-desc">My professional trajectory in creating software solutions and mastering
+                        backend systems.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item spotlight-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Lead Full-Stack Web Developer</h3>
+                                <span class="timeline-company">Independent & Client Projects</span>
+                            </div>
+                            <span class="timeline-badge">2024 — Present</span>
+                        </div>
+                        <p class="timeline-text">
+                            Leading end-to-end development of custom client web applications, designing database
+                            schemas, implementing robust authentication workflows, and optimizing server performance.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Laravel</span>
+                            <span>PHP 8</span>
+                            <span>REST APIs</span>
+                            <span>System Architecture</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item spotlight-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Web Developer & Software Craftsman</h3>
+                                <span class="timeline-company">Digital Product Studio</span>
+                            </div>
+                            <span class="timeline-badge">2022 — 2024</span>
+                        </div>
+                        <p class="timeline-text">
+                            Built modern interactive user interfaces and integrated backend services. Authored modular
+                            Blade & modern JavaScript components, created automated seeders and migrations, and reduced
+                            average page load times by 40%.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>JavaScript</span>
+                            <span>Blade</span>
+                            <span>MySQL</span>
+                            <span>Responsive UI</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item spotlight-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Junior Backend Developer</h3>
+                                <span class="timeline-company">Tech Initiatives</span>
+                            </div>
+                            <span class="timeline-badge">2021 — 2022</span>
+                        </div>
+                        <p class="timeline-text">
+                            Designed relational database tables, implemented REST endpoints with parameter validation,
+                            conducted unit testing, and collaborated on Git version-controlled Agile sprints.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>Git</span>
+                            <span>HTTP APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">05 // Collaboration</span>
+                    <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+                    <p class="section-desc">Have an upcoming project, need full-stack expertise, or want to discuss a
+                        software role? Drop me a message.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left: Contact Details Card -->
+                    <div class="contact-card spotlight-card">
+                        <h3 class="contact-card-title">Get in Touch Directly</h3>
+                        <p class="contact-card-subtitle">
+                            I'm always eager to collaborate on challenging web systems, freelance engagements, and
+                            high-growth engineering teams.
+                        </p>
+
+                        <div class="contact-methods">
+                            <!-- Email -->
+                            <div class="method-item">
+                                <div class="method-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L1 7" />
+                                    </svg>
+                                </div>
+                                <div class="method-details">
+                                    <span class="method-label">Direct Email</span>
+                                    <span class="method-value">iamdulanga.dev@gmail.com</span>
+                                </div>
+                                <button class="btn-copy-mini" id="copyEmailMini" title="Copy email address"
+                                    aria-label="Copy Email">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Location & Timezone -->
+                            <div class="method-item">
+                                <div class="method-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                </div>
+                                <div class="method-details">
+                                    <span class="method-label">Location & Timezone</span>
+                                    <span class="method-value">Colombo, Sri Lanka (UTC+05:30)</span>
+                                </div>
+                            </div>
+
+                            <!-- Availability status -->
+                            <div class="method-item">
+                                <div class="method-icon green-icon">
+                                    <span class="status-indicator"></span>
+                                </div>
+                                <div class="method-details">
+                                    <span class="method-label">Current Work Status</span>
+                                    <span class="method-value text-green">Available for Freelance & Full-time</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Channels -->
+                        <div class="social-links-block">
+                            <span class="social-header-label">Connect across platforms:</span>
+                            <div class="social-pills">
+                                <a href="https://github.com/iamdulanga" target="_blank" rel="noopener noreferrer"
+                                    class="social-pill" aria-label="GitHub Profile">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                                    </svg>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://linkedin.com/in/iamdulanga" target="_blank" rel="noopener noreferrer"
+                                    class="social-pill" aria-label="LinkedIn Profile">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                    </svg>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="mailto:iamdulanga.dev@gmail.com" class="social-pill"
+                                    aria-label="Send Direct Email">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                    <span>Email</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Contact Form -->
+                    <div class="contact-form-card spotlight-card">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <h3 class="form-title">Send a Direct Message</h3>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" id="name" name="name" class="form-input"
+                                        placeholder="e.g. Alex Morgan" required autocomplete="name">
+                                    <span class="field-error" id="nameError"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-input"
+                                        placeholder="alex@company.com" required autocomplete="email">
+                                    <span class="field-error" id="emailError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Project Type / Inquiry</label>
+                                <select id="subject" name="subject" class="form-select">
+                                    <option value="Full-Stack Web App">Full-Stack Web Application</option>
+                                    <option value="Laravel / Backend Development">Laravel & Backend Architecture
+                                    </option>
+                                    <option value="API Integration & Microservices">API Integration & Microservices
+                                    </option>
+                                    <option value="Full-Time Engineering Role">Full-Time / Contract Engineering Role
+                                    </option>
+                                    <option value="Other">Other Collaboration</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message Details</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="4"
+                                    placeholder="Tell me about your project, goals, or timeline..." required></textarea>
+                                <span class="field-error" id="messageError"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full submit-btn" id="submitBtn">
+                                <span class="btn-text">Transmit Message</span>
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13" />
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#hero" class="brand-logo footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-name">dulanga</span>
+                    <span class="logo-accent">.dev</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </a>
+                <p class="footer-tagline">Crafting modern, scalable web applications with code craftsmanship.</p>
+            </div>
+
+            <div class="footer-center">
+                <p class="copyright-text">
+                    &copy; <span id="currentYear">2026</span> Dulanga. All rights reserved.
+                </p>
+                <p class="tech-stack-note">Built with pure Vanilla HTML5, CSS3, & Modern JavaScript.</p>
+            </div>
+
+            <div class="footer-right">
+                <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 15l-6-6-6 6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Case Study Modal -->
+    <div class="modal-backdrop" id="caseStudyModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-container">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="modal-content" id="modalContent">
+                <!-- Dynamically populated via script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification for Actions -->
+    <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+        <div class="toast-icon" id="toastIcon">✓</div>
+        <div class="toast-body">
+            <div class="toast-title" id="toastTitle">Notification</div>
+            <div class="toast-message" id="toastMessage">Action completed successfully</div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
